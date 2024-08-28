@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Study</title>
+    <script>
+        function saveStudy() {
+            alert('Study saved!');
+            window.location.href = 'main.html'; 
+        }
+        function cancel() {
+            window.location.href = 'main.html'; 
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">Add Study</h1>
+    <form align="center">
+      
+        <input type="hidden" id="study-id" name="study-id">
+
+    
+        <label for="study-name">Study Name:</label>
+        <input type="text" id="study-name" name="study-name" required><br><br>
+
+    
+        <label for="study-description">Study Description:</label>
+        <textarea id="study-description" name="study-description"></textarea><br><br>
+
+        <label for="study-phase">Study Phase:</label>
+        <select id="study-phase" name="study-phase">
+            <option value="Phase I">Phase I</option>
+            <option value="Phase II">Phase II</option>
+            <option value="Phase III">Phase III</option>
+            <option value="Phase IV">Phase IV</option>
+        </select><br><br>
+
+
+        <label for="sponsor-name">Sponsor Name:</label>
+        <input type="text" id="sponsor-name" name="sponsor-name"><br><br>
+
+        <button type="button" onclick="saveStudy()">Save</button>
+        <button type="button" onclick="cancel()">Cancel</button>
+    </form>
+</body>
+</html>

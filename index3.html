@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Study</title>
+    <script>
+        function updateStudy() {
+            alert('Study updated!');
+            window.location.href = 'main.html'; 
+        }
+        function cancel() {
+            window.location.href = 'main.html'; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Edit Study</h1>
+    <form>
+        <label for="study-id">Study ID:</label>
+        <input type="text" id="study-id" name="study-id" readonly><br><br>
+        <label for="study-name">Study Name:</label>
+        <input type="text" id="study-name" name="study-name" required><br><br>
+
+    
+        <label for="study-description">Study Description:</label>
+        <textarea id="study-description" name="study-description"></textarea><br><br>
+
+    
+        <label for="study-phase">Study Phase:</label>
+        <select id="study-phase" name="study-phase">
+            <option value="Phase I">Phase I</option>
+            <option value="Phase II">Phase II</option>
+            <option value="Phase III">Phase III</option>
+            <option value="Phase IV">Phase IV</option>
+        </select><br><br>
+
+        <label for="sponsor-name">Sponsor Name:</label>
+        <input type="text" id="sponsor-name" name="sponsor-name"><br><br>
+
+        <button type="button" onclick="updateStudy()">Update</button>
+        <button type="button" onclick="cancel()">Cancel</button>
+    </form>
+</body>
+</html>
